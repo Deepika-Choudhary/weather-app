@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Mochiy+Pop+P+One&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Weather Updates</title>
 </head>
 <body>
-    <!-- <script>
-        const getdata = async () => {
-            console.log("weather forecast");
-            const request = await fetch("api.openweathermap.org/data/2.5/weather?q=London&appid={11f76e6f8a32776a235e1e6bf8ba0393}");
-            const data = await request.json();
-            console.log(data);
-    };
-    
-    getdata(); -->
-    <!-- </script> -->
+    <h3 style="color: wheat;font-size: 2rem;font-family: 'Mochiy Pop P One', sans-serif;text-align: center;">Weather Updates</h3>
+    <div class="info">
+
+        <div class="temp">
+            <h3 id="date"></h3>
+            <h3 id="city"></h3>
+            <h3 id="degree"></h3>
+            <!-- <h3 id=""></h3> -->
+        </div>
+        <div class="moreData">
+            <h3 id="pressure"></h3>
+            <h3 id="humidity"></h3>
+            <h3 id="visibility"></h3>
+            
+            <button onclick="changeLocation()" class="location">Change location</button>
+            <div id="addlocation"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
