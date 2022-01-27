@@ -47,8 +47,21 @@ function submitBtn() {
 
 function changeLocation() {
   document.getElementById("addlocation").innerHTML =
-    '<input type="text" placeholder="Enter city name"> <button onclick="submitBtn()">Submit </button>';
-  // cityName = text;
-  //   cityName = document.getElementById("addlocation").innerHTML;
+    '<input type="text" placeholder="Enter city name">';
+  const city2 = document
+    .getElementById("addlocation")
+    .getElementsByTagName("input")[0];
+  console.log(
+    document.getElementById("addlocation").getElementsByTagName("input")
+  );
+
+  city2.addEventListener("change", (e) => {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}+&appid=11f76e6f8a32776a235e1e6bf8ba0393`;
+    getdata(url);
+    console.log(
+      document.getElementById("addlocation").getElementsByTagName("input")
+    );
+  });
 }
+
 getdata(url);
